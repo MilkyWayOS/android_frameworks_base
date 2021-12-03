@@ -337,4 +337,6 @@ public interface CentralSurfaces extends Dumpable, LifecycleOwner {
      */
     ActivityLaunchAnimator.Controller getAnimatorControllerFromNotification(
             ExpandableNotificationRow associatedView);
+
+    void setBlockedGesturalNavigation(boolean blocked);
 }
