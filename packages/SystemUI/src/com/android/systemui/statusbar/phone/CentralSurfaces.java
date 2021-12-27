@@ -42,6 +42,12 @@ import com.android.systemui.display.data.repository.DisplayMetricsRepository;
 import com.android.systemui.navigationbar.NavigationBarView;
 import com.android.systemui.plugins.ActivityStarter.OnDismissAction;
 import com.android.systemui.qs.QSPanelController;
+import com.android.systemui.shade.NotificationPanelViewController;
+import com.android.systemui.shade.NotificationShadeWindowView;
+import com.android.systemui.shade.NotificationShadeWindowViewController;
+import com.android.systemui.statusbar.LightRevealScrim;
+import com.android.systemui.statusbar.NotificationPresenter;
+import com.android.systemui.statusbar.policy.GameSpaceManager;
 import com.android.systemui.shared.system.RemoteAnimationRunnerCompat;
 import com.android.systemui.statusbar.notification.row.ExpandableNotificationRow;
 import com.android.systemui.util.Compile;
@@ -309,6 +315,9 @@ public interface CentralSurfaces extends Dumpable, LifecycleOwner {
     /** @deprecated Use {@link DisplayMetricsRepository} instead. */
     @Deprecated
     float getDisplayDensity();
+
+
+    GameSpaceManager getGameSpaceManager();
 
     public static class KeyboardShortcutsMessage {
         final int mDeviceId;
