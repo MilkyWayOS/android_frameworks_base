@@ -2302,7 +2302,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void loadDefaultLauncherSettings(SQLiteStatement stmt) {
-	loadStringSetting(stm, Settings.Global.LAUNCHER_OVERLAY_PACKAGE,
+	loadStringSetting(stmt, Settings.Global.LAUNCHER_OVERLAY_PACKAGE,
 			R.string.def_launcher_overlay_package);
     }
 
