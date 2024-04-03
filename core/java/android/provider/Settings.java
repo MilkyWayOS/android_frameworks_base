@@ -17396,6 +17396,13 @@ public final class Settings {
                 "uids_allowed_on_restricted_networks";
 
         /**
+	 * A stub for overlay over launcher package
+	 *
+	 * @hide
+	 */
+	public static final String LAUNCHER_OVERLAY_PACKAGE = "launcher_overlay_package";
+
+	/**
          * Global settings that shouldn't be persisted.
          *
          * @hide

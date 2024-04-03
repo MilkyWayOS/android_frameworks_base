@@ -1822,7 +1822,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 stmt = db.compileStatement("INSERT OR REPLACE INTO system(name,value)"
                         + " VALUES(?,?);");
                 loadSetting(stmt, Settings.System.HIDE_ROTATION_LOCK_TOGGLE_FOR_ACCESSIBILITY, 0);
-                db.setTransactionSuccessful();
+                loadDefaultLauncherSettings(stmt);
+		db.setTransactionSuccessful();
             } finally {
                 db.endTransaction();
                 if (stmt != null) stmt.close();
@@ -2298,6 +2299,11 @@ class DatabaseHelper extends SQLiteOpenHelper {
     private void loadDefaultHapticSettings(SQLiteStatement stmt) {
         loadBooleanSetting(stmt, Settings.System.HAPTIC_FEEDBACK_ENABLED,
                 R.bool.def_haptic_feedback);
+    }
+
+    private void loadDefaultLauncherSettings(SQLiteStatement stmt) {
+	loadStringSetting(stm, Settings.Global.LAUNCHER_OVERLAY_PACKAGE,
+			R.string.def_launcher_overlay_package);
     }
 
     private void loadSecureSettings(SQLiteDatabase db) {

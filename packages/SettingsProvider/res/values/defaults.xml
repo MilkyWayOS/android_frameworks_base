@@ -304,6 +304,8 @@
     <!-- This value is used for the default system capabilities used on LE device. -->
     <string name="def_wearable_leSystemCapabilities" translatable="false">1</string>
 
+    <!-- Which packages is Smartspace overlay for Trebuchet -->
+    <string name="def_launcher_overlay_package">com.kieronquinn.app.smartspacer</string>
     <!-- Whether to allow mobile signal detector by default. -->
     <bool name="def_wearable_mobileSignalDetectorAllowed">true</bool>
 
