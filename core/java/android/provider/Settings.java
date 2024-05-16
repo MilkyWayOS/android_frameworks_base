@@ -12189,6 +12189,13 @@ public final class Settings {
         public static final String DND_CONFIGS_MIGRATED = "dnd_settings_migrated";
 
         /**
+         * Game overlay mode. Used by GameSpace.
+         *
+         * @hide
+         */
+        public static final String GAME_OVERLAY = "game_overlay";
+
+        /**
          * Controls whether to hide private space entry point in All Apps
          *
          * @hide
