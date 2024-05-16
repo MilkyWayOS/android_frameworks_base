@@ -3041,38 +3041,10 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces {
     }
 
     @Override
-    public boolean isBouncerShowingOverDream() {
-        return mBouncerShowingOverDream;
-    }
-
-    @Override
     public boolean isKeyguardSecure() {
         return mStatusBarKeyguardViewManager.isSecure();
     }
 
-    @Override
-    public void onTuningChanged(String key, String newValue) {
-        switch (key) {
-            case FORCE_SHOW_NAVBAR:
-                if (mDisplayId != Display.DEFAULT_DISPLAY || mWindowManagerService == null)
-                    return;
-                boolean mNavbarVisible =
-                        TunerService.parseIntegerSwitch(newValue, Utils.hasNavbarByDefault(mContext));
-                boolean hasNavbar = getNavigationBarView() != null;
-                if (mNavbarVisible) {
-                    if (!hasNavbar) {
-                            mNavigationBarController.onDisplayReady(mDisplayId);
-                    }
-                } else {
-                    if (hasNavbar) {
-                        mNavigationBarController.onDisplayRemoved(mDisplayId);
-                    }
-                }
-                break;
-            default:
-                break;
-         }
-    }
 
     @Override
     public GameSpaceManager getGameSpaceManager() {
