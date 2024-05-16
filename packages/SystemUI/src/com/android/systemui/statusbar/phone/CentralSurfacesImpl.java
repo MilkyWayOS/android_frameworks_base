@@ -3040,7 +3040,6 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces {
         return isBouncerShowing() && mStatusBarKeyguardViewManager.primaryBouncerNeedsScrimming();
     }
 
-    @Override
     public boolean isKeyguardSecure() {
         return mStatusBarKeyguardViewManager.isSecure();
     }
